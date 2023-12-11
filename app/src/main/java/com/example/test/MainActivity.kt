@@ -26,6 +26,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import com.example.test.AndroidDownloader
+import com.example.test.ui.theme.TestType
 
 
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -58,6 +59,15 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally
                         ) {
 
+
+                        Text(text = "Голосов Денис Юрьерич",
+                            style = TestType.bodyLarge)
+                        Spacer(modifier = Modifier.size(6.dp))
+                        Text(text = "ИКБО-07-21",
+                            style = TestType.bodySmall)
+                        Spacer(modifier = Modifier.size(6.dp))
+
+                        
                         var text by rememberSaveable { mutableStateOf("") }
 
                         TextField(
